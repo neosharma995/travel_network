@@ -1,0 +1,46 @@
+
+.global-loaderr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+    flex-direction: column;
+  }
+  
+ 
+  .spinner {
+    width: 160px;
+    height: 160px;
+    border: 16px solid #e0e0e0;
+    border-top: 16px solid  #046271; 
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+    margin-bottom: 20px;
+  }
+  
+  
+
+
+  
+ 
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-text {
+    font-size: 30px;
+    color: #046271;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive; 
+    animation: text-blink 2s infinite;
+  }
+  
+  
+  @keyframes text-blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+  
