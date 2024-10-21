@@ -74,7 +74,7 @@ const TabTourPackages = () => {
               return result.map((pkg, pkgIndex) => (
                 <div key={`${index}-${pkgIndex}`} className="packageCard">
                
-                  <Link href={`/destinations/${filterPackage.slug}`}>
+                  <Link href={`/tour-packages/${filterPackage.slug}`}>
                     <img src={pkg.package_image} alt={pkg.package_title} className="packageImage" />
                     <h3 className="packageTitle">{pkg.package_title}</h3>
                     <p className="packageRoute">{pkg.package_root}</p>
