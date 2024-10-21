@@ -1,6 +1,9 @@
 import React from 'react'
 
 function TopBanner({result}) {
+
+  console.log(`show result in about us page result`)
+  console.log(result)
  
   return (
      <>

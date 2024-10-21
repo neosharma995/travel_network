@@ -1,6 +1,7 @@
 
 import { FaTwitter, FaInstagram, FaFacebookF,  FaPhoneAlt, FaEnvelope, FaYoutube } from 'react-icons/fa';
 
+
 const iconMap = {
   facebook: <FaFacebookF size={22} />,
   twitter: <FaTwitter size={22} />,
@@ -8,9 +9,9 @@ const iconMap = {
   youtube: <FaYoutube size={22} />,
 };
 
- 
 
 function Header({ result }) {
+  
   let { header = {} } = result
 
   return (
