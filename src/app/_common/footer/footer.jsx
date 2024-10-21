@@ -1,9 +1,12 @@
 'use client'
-import { AllPackages } from "@/context/contextProviders"
+
 import footerBg from '../../../../public/images/background.png'
 import { EXPORT_ALL_APIS } from "@/utils/api/apis"
 import Link from "next/link"
 import {   useEffect, useState } from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 
 
 function Footer({ result }) {
@@ -21,6 +24,9 @@ function Footer({ result }) {
   let { footer = {} } = result
 
   let links=data?.map((e)=>e?.slug)
+
+  const message = "Hello! I'd like to chat."; 
+  const encodedMessage = encodeURIComponent(message);
  
   
   return (
@@ -110,6 +116,16 @@ function Footer({ result }) {
           </div>
 
         
+        </div>
+        <div className="whatsapp">
+        <a
+            href={`${process.env.NEXT_PUBLIC_WHATSAPP_API_URL}/send/?phone=${footer?.phone_one}&text&type=phone_number&app_absent=0`}
+            target="_blank"
+            rel="noopener noreferrer"
+            
+        >
+            <FontAwesomeIcon icon={faWhatsapp} size="lg" style={{ marginRight: '8px' }} />
+        </a>
         </div>
       </section>
     </>

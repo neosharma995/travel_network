@@ -7,6 +7,9 @@ import Link from 'next/link';
 
 const TourPackages = () => {
   let [isOpen, setIsOpen] = useState(false);
+
+
+ 
   
   
   const data = {
@@ -69,6 +72,8 @@ const TourPackages = () => {
           </div>
         </div>
       </div>
+
+     
     </>
   );
 };
