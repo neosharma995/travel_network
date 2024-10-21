@@ -2,9 +2,7 @@
 import BookingForm from '@/app/Components/bookingForm';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-
 import { useRouter } from "next/navigation";
-
 import { usePathname } from "next/navigation";
 
 function Navbar({ result }) {
@@ -14,10 +12,12 @@ function Navbar({ result }) {
   let { header = {} } = result;
   const router = useRouter();
 
-
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false); // Close the menu
   };
 
   useEffect(() => {
@@ -30,7 +30,6 @@ function Navbar({ result }) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
 
   // Get the current path
   const currentPath = router.pathname;
@@ -60,7 +59,7 @@ function Navbar({ result }) {
             <div className={`navbar_section_second ${isMenuOpen ? 'active' : ''}`}>
               <ul className="navbar">
                 <li>
-                  <Link href="/" className={isActive("/") ? "active" : ""}>
+                  <Link href="/" className={isActive("/") ? "active" : ""} onClick={closeMenu}>
                     Home
                   </Link>
                 </li>
@@ -68,6 +67,7 @@ function Navbar({ result }) {
                   <Link
                     href="/about-us"
                     className={isActive("/about-us") ? "active" : ""}
+                    onClick={closeMenu}
                   >
                     About
                   </Link>
@@ -76,6 +76,7 @@ function Navbar({ result }) {
                   <Link
                     href="/tour-packages"
                     className={isActive("/tour-packages") ? "active" : ""}
+                    onClick={closeMenu}
                   >
                     Tour Packages
                   </Link>
@@ -84,6 +85,7 @@ function Navbar({ result }) {
                   <Link
                     href="/destinations"
                     className={isActive("/destinations") ? "active" : ""}
+                    onClick={closeMenu}
                   >
                     Destinations
                   </Link>
@@ -92,6 +94,7 @@ function Navbar({ result }) {
                   <Link
                     href="/plan-your-trip"
                     className={isActive("/plan-your-trip") ? "active" : ""}
+                    onClick={closeMenu}
                   >
                     Plan Your Trip
                   </Link>
@@ -100,6 +103,7 @@ function Navbar({ result }) {
                   <Link
                     href="/contact-us"
                     className={isActive("/contact-us") ? "active" : ""}
+                    onClick={closeMenu}
                   >
                     Contact Us
                   </Link>

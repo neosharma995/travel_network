@@ -1656,6 +1656,10 @@ flex-wrap: wrap;
   .navbar_section_second ul {
     flex-direction: column;
     width: 100%;
+    align-items: center!important;
+  }
+  .navbar_section_second ul li{
+    padding-bottom:10px ;
   }
 
   .container-two {
