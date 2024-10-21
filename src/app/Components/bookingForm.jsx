@@ -14,6 +14,7 @@ function BookingForm({ setIsOpen }) {
     });
 
     let [errors, setErrors] = useState({});
+    let [loading, setLoading] = useState(false);
 
     let getInputHandle = (e) => { // Corrected typo from "getInputHandel"
         let { name, value } = e.target;
@@ -81,6 +82,7 @@ function BookingForm({ setIsOpen }) {
             formData.append('phonenumber', resp.phonenumber);
             formData.append('yourmessage', resp.yourmessage);
 
+            setLoading(true)
             let data = await api.submitBookingQuery(formData);
             if (data) {
                 console.log(data);
@@ -97,6 +99,7 @@ function BookingForm({ setIsOpen }) {
                     setIsOpen(false);
                 }, 700);
             }
+            setLoading(false)
         }
     };
 
@@ -177,7 +180,7 @@ function BookingForm({ setIsOpen }) {
 
                             <div className="button_handler">
                                 <button type="submit" className="btn" onClick={handleSubmit}>
-                                    Send Message
+                                    {loading?'sending....':'Send Message'}
                                 </button>
                             </div>
                         </div>
