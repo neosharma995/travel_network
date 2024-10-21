@@ -17,6 +17,23 @@
     animation: spin 1.5s linear infinite;
     margin-bottom: 20px;
   }
+
+
+  .whatsapp {
+    position: fixed;
+    bottom: 166px;
+    right: 34px;
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 99999999999999;
+}
+.whatsapp a svg {
+    color: #00800080;
+    margin: 0px!important;
+}
+  .navbar_section_second ul li{
+    padding-bottom:10px ;
+  }
   
   
 
