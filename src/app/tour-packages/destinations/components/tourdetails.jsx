@@ -68,7 +68,7 @@ const TourDetails = ({ allPackages }) => {
                 const destination = packageGroup?.destination[0];
                 if (Array.isArray(packagesArray)) {
                   return packagesArray.map((packageItem, index) => (
-                    <Link href={`/tour-packages/${packageGroup?.slug}`}>
+                    <Link href={`/destinations/${destination}/${packageGroup?.slug}`}>
                       <div className="package" key={`${groupIndex}-${index}`}>
                         <div className="packages-image">
                           <img src={packageItem.package_image} alt={packageItem.package_title} />

@@ -42,10 +42,6 @@ const TabTourPackages = () => {
     }
   }, [selectedCategory]);
 
-  
- 
- 
- 
 
   return (
     <>
@@ -56,7 +52,7 @@ const TabTourPackages = () => {
       <p>Vacations to make your experience enjoyable in India!</p>
       <div className='packages-container-box'> 
         <div className="tab-Container">
-          {categories.slice(0, 7).map((category, index) => (
+          {categories.slice(0, 6).map((category, index) => (
             <button
               key={index}
               className={`tab-packages ${selectedCategory === category.slug ? 'active' : ''}`}
@@ -70,13 +66,15 @@ const TabTourPackages = () => {
         <div className="packagesContainer">
           {packages?.map((filterPackage, index) => {
             const result = filterPackage?.acf?.all_packages;
+            const destination = filterPackage?.destination?.[0];  
             if (Array.isArray(result)) {
               return result.map((pkg, pkgIndex) => (
                 <div key={`${index}-${pkgIndex}`} className="packageCard">
                
-                  <Link href={`/tour-packages/${filterPackage.slug}`}>
+                  <Link href={`/destinations/${destination}/${filterPackage.slug}`}>
                     <img src={pkg.package_image} alt={pkg.package_title} className="packageImage" />
                     <h3 className="packageTitle">{pkg.package_title}</h3>
+                   
                     <p className="packageRoute">{pkg.package_root}</p>
                     <p className="packageDuration">{pkg.package_duration}</p>
                     <p className="packagePrice">

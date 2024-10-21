@@ -74,7 +74,7 @@ function Navbar({ result }) {
                 </li>
                 <li>
                   <Link
-                    href="/tour-packages"
+                    href="/tour-packages/destinations"
                     className={isActive("/tour-packages") ? "active" : ""}
                     onClick={closeMenu}
                   >
