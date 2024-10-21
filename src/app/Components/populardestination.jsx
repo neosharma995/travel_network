@@ -12,9 +12,6 @@ const PopularDestinations = () => {
   return (
     <div className="container popular-destinations">
      <h2>Popular Destinations</h2>
-     <h2>Popular Destinations</h2>
-     <h2>Popular Destinations</h2>
-     <h2>Popular Destinations</h2>
      <p>Vacations to make your experience enjoyable in India!</p>
       <div className="destinations-grid">
       {destinations.slice(0,5).map((destination, index) => (
