@@ -37,7 +37,7 @@ const DestinationsTourDetails = ({ allPackages, slug }) => {
                           <p>{packageItem?.package_description}</p>
                           <div className="days-night">
                             <strong>Days {packageItem.package_days} / Nights {packageItem.packages_nights}</strong>
-                            <p><span>From</span> {packageItem.package_price}</p>
+                            <p><span>From</span> ₹{packageItem.package_price}</p>
                           </div>
                           <button>Book Now</button>
                         </div>

@@ -22,6 +22,11 @@ function Slider({ response }) {
     return () => clearInterval(slideInterval);  
   }, [response?.packages_galleries.length]);
 
+
+
+  console.log(`response`)
+  console.log(response)
+
   
 
   return (
@@ -31,8 +36,10 @@ function Slider({ response }) {
             
             <div className="top_section">
               <div className="top_left_section">
-              <h3>{response?.package_title}</h3>
+           
+              <h3>{response?.package_title} </h3>
               <p dangerouslySetInnerHTML={{__html:response?.package_description}}></p>
+              <h2 style={{marginTop:'20px',color:'#046271'}}>Price ₹{response?.package_price}</h2>
 
               </div>
               <div className="top_right_section">

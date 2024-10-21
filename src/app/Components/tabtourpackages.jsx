@@ -78,7 +78,7 @@ const TabTourPackages = () => {
                     <p className="packageRoute">{pkg.package_root}</p>
                     <p className="packageDuration">{pkg.package_duration}</p>
                     <p className="packagePrice">
-                      From: {pkg.package_price} <span className="originalPrice">{pkg.original_price}</span>
+                      From: ₹{pkg.package_price} <span className="originalPrice">{pkg.original_price}</span>
                     </p>
                   </Link>
                     <button className="bookButton" onClick={()=>setIsOpen(true)}>Book Now</button>
@@ -90,7 +90,7 @@ const TabTourPackages = () => {
           })}
         </div>
 
-        <button className="viewMoreButton" onClick={()=>router.push('/tour-packages')} style={{cursor:'pointer'}}>View More</button>
+        <button className="viewMoreButton" onClick={()=>router.push('/tour-packages/destinations')} style={{cursor:'pointer'}}>View More</button>
       </div>
     </div>
     </>
