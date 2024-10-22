@@ -10,6 +10,7 @@ function Navbar({ result }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   let { header = {} } = result;
+ 
   const router = useRouter();
 
   const toggleMenu = () => {

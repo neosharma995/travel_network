@@ -14,6 +14,9 @@ function Header({ result }) {
   
   let { header = {} } = result
 
+  console.log(`header in `)
+  console.log(header)
+
   return (
     <>
       <div className="header_outer container">
@@ -28,7 +31,7 @@ function Header({ result }) {
             <div className="header_right_section">
               <ul>
                 {header?.socialLinks?.map((ele, index) => {
-                  return <li key={index}><a href={"/"} target='_blank'>  {iconMap[ele.iconName] || null} </a></li>
+                  return <li key={index}><a href={ele?.iconUrl} target='_blank'>  {iconMap[ele.iconName] || null} </a></li>
                 })}
               </ul>
             </div>
