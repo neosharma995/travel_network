@@ -1582,6 +1582,9 @@ h3 {
 // Navbar toogle Button Css 
 
 @media (max-width: 1024px) {
+  .sider_bar_wrapper {
+    padding: 0px 20px;
+}
   .plan_your_trip .form_plan_trip {
     width: 100%;
   }

@@ -8,9 +8,8 @@ function Sidebar() {
     
   return (
     <div className="destination_section">
-
+      <div className="sider_bar_wrapper">
     <h2><a href="/destinations"> popular destinations </a> </h2>
-
     {destinations.slice(0, 3).map((destination, index) => (
       <div className="destination_wrapper" key={index}>
         <Link href={`/destinations/${destination?.slug}`}>
@@ -19,6 +18,10 @@ function Sidebar() {
         </Link>
       </div>
     ))}
+
+      </div>
+
+
 
   </div>
   )
