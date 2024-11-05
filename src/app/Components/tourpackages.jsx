@@ -43,7 +43,7 @@ const TourPackages = () => {
                         <img src={packageItem.package_image} alt={packageItem.package_title} />
                       </div>
                       <div className="packages-inner-txt">
-                        <h3>{packageItem?.package_title}</h3>
+                        <h3>{packageItem?.package_title.slice(0,45)+'...'}</h3>
                         <p>
                           {packageItem?.package_description?.length > 60
                             ? `${packageItem.package_description.slice(0, 60)}...`

@@ -33,8 +33,8 @@ const DestinationsTourDetails = ({ allPackages, slug }) => {
                           <img src={packageItem.package_image} alt={packageItem.package_title} />
                         </div>
                         <div className="packages-inner-txt">
-                          <h3>{packageItem?.package_title}</h3>
-                          <p>{packageItem?.package_description}</p>
+                          <h3>{packageItem?.package_title?.slice(0,50)+'...'}</h3>
+                          <p>{packageItem?.package_description.slice(0,200)+'...'}</p>
                           <div className="days-night">
                             <strong>Days {packageItem.package_days} / Nights {packageItem.packages_nights}</strong>
                             <p><span>From</span> ₹{packageItem.package_price}</p>
