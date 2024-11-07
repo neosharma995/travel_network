@@ -9,7 +9,7 @@ function TopBanner({ result }) {
       <div className="section_outer container-two">
         <div className="section_inner">
           <div className="section_wrapper">
-            <h1>{result?.section_top_banner_heading || 'destinations'}</h1>
+            <h1>{result?.section_top_banner_heading.slice(0,60) || 'destinations'}</h1>
             <img 
               src={result?.section_top_banner_image || empty.src} 
               alt="section_image" 

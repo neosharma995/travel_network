@@ -24,8 +24,7 @@ function Slider({ response }) {
 
 
 
-  console.log(`response`)
-  console.log(response)
+ 
 
   
 
@@ -37,8 +36,8 @@ function Slider({ response }) {
             <div className="top_section">
               <div className="top_left_section">
            
-              <h3>{response?.package_title} </h3>
-              <p dangerouslySetInnerHTML={{__html:response?.package_description}}></p>
+              <h3>{response?.package_title?.slice(0,100)} </h3>
+              <p dangerouslySetInnerHTML={{__html:response?.package_description?.slice(0,200)}}></p>
               <h2 style={{marginTop:'20px',color:'#046271'}}>Price ₹{response?.package_price}</h2>
 
               </div>

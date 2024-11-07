@@ -31,8 +31,8 @@ function Slider({ response }) {
             
             <div className="top_section">
               <div className="top_left_section">
-              <h3>{response?.package_title}</h3>
-              <p dangerouslySetInnerHTML={{__html:response?.package_description}}></p>
+              <h3>{response?.package_title?.slice(0,60)}</h3>
+              <p dangerouslySetInnerHTML={{__html:response?.package_description?.slice(0,100)}}></p>
 
               </div>
               <div className="top_right_section">
