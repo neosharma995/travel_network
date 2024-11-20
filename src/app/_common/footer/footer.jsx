@@ -6,18 +6,32 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 function Footer({ result }) {
-  let api = EXPORT_ALL_APIS()
+  let api = EXPORT_ALL_APIS()  // Use the API functions from EXPORT_ALL_APIS
   let [data, setData] = useState([])
+  let [justdial, setJustDial] = useState([])
+
+
   useEffect(() => {
     let loadAlldestinations = async () => {
       let resp = await api.fetchAllDestinations()
       setData(resp)
     }
     loadAlldestinations()
+
+    let fetchJustDealData = async () => {
+      let respData = await api.fetchJustDealUrl()  
+      let justdial = respData?.[0]?.acf?.just_dial
+      setJustDial(justdial)
+    }
+    fetchJustDealData(); 
+
   }, [])
+
   let { footer = {} } = result
   let links = data?.map((e) => e?.slug)
+
   return (
     <>
 
@@ -106,6 +120,20 @@ function Footer({ result }) {
 
 
         </div>
+        <div className="justdial">
+          <a
+            href={justdial}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img 
+              src="/images/JudtDeal.png" 
+              alt="Justdial" 
+              style={{ width: '100%', height: '100%'}} 
+            />
+          </a>
+        </div>
+
         <div className="whatsapp">
           <a
             href={`${process.env.NEXT_PUBLIC_WHATSAPP_API_URL}/send/?phone=${footer?.phone_one || 8894485216}&text&type=phone_number&app_absent=0`}

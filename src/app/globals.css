@@ -19,6 +19,23 @@
   }
 
 
+  .justdial {
+    position: fixed;
+    bottom: 100px;
+    right: 18px;
+    font-weight: bold;
+    z-index: 99999999999999;
+}
+.justdial a {
+  background: #116db6;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+}
+
   .whatsapp {
     position: fixed;
     bottom: 42px;

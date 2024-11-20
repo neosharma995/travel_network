@@ -99,7 +99,11 @@ export const EXPORT_ALL_APIS = () => {
             return filterResponse
         }
     }
-
+    let fetchJustDealUrl=async()=>{
+        let resp=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/wp/v2/justdeal`)
+        let result=await resp.json()
+        return result
+    }
 
     //////////////////////////// submission forms post method ///////////////////////////////////////
 
@@ -148,6 +152,7 @@ export const EXPORT_ALL_APIS = () => {
         fetchSinglePackagesApi,
         fetchDestinationsFilterPackages,
         fetchCategoriesFilterPackages,
+        fetchJustDealUrl,
         submitBookingQuery,
         submitContactQuery,
         submitPlanATripQuery
