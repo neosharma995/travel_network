@@ -1,6 +1,6 @@
 export const EXPORT_ALL_APIS = () => {
 
-    ///////////////////////// fetch all pages
+    ///////////////////////// fetch all pages updated the url
 
     let fetchHomePage=async()=>{
         let resp=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/wp/v2/pages?slug=home&fields=acf&acf_format=standard`)
