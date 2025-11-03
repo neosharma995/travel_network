@@ -3,8 +3,6 @@ set -e
 
 echo "Deployment started..."
 
-cd /home/travel/travel_network
-
 # Pull the latest version of the app
 git pull origin master
 echo "New changes copied to server !"
