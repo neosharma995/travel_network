@@ -1,64 +1,126 @@
 export const EXPORT_ALL_SEO_APIS = () => {
     const fetchHomeSeoApi=async()=>{
-        let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/`)
-        let response=await data.json()
-        return response
+        try {
+            let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/`)
+            if (!data.ok) return null
+            let response=await data.json()
+            return response
+        } catch (error) {
+            console.error("fetchHomeSeoApi error:", error)
+            return null
+        }
     }
     const fetchAboutSeoApi=async()=>{
-        let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/about-us`)
-        let response=await data.json()
-        return response
+        try {
+            let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/about-us`)
+            if (!data.ok) return null
+            let response=await data.json()
+            return response
+        } catch (error) {
+            console.error("fetchAboutSeoApi error:", error)
+            return null
+        }
     }
     const fetchContactUsSeoApi=async()=>{
-        let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/contact-us`)
-        let response=await data.json()
-        return response
+        try {
+            let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/contact-us`)
+            if (!data.ok) return null
+            let response=await data.json()
+            return response
+        } catch (error) {
+            console.error("fetchContactUsSeoApi error:", error)
+            return null
+        }
     }
     const fetchDestinationsSeoApi=async()=>{
-        let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/destinations`)
-        let response=await data.json()
-        return response
+        try {
+            let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/destinations`)
+            if (!data.ok) return null
+            let response=await data.json()
+            return response
+        } catch (error) {
+            console.error("fetchDestinationsSeoApi error:", error)
+            return null
+        }
     }
     const fetchPlanATripSeoApi=async()=>{
-        let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/plan-a-trip`)
-        let response=await data.json()
-        return response
+        try {
+            let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/plan-a-trip`)
+            if (!data.ok) return null
+            let response=await data.json()
+            return response
+        } catch (error) {
+            console.error("fetchPlanATripSeoApi error:", error)
+            return null
+        }
     }
     const fetchTourPackagesSeoApi=async()=>{
-        let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/tour-packages`)
-        let response=await data.json()
-        return response
+        try {
+            let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/tour-packages`)
+            if (!data.ok) return null
+            let response=await data.json()
+            return response
+        } catch (error) {
+            console.error("fetchTourPackagesSeoApi error:", error)
+            return null
+        }
     }
     const fetchPrivacyPolicySeoApi=async()=>{
-        let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/privacy-policy`)
-        let response=await data.json()
-        return response
+        try {
+            let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/privacy-policy`)
+            if (!data.ok) return null
+            let response=await data.json()
+            return response
+        } catch (error) {
+            console.error("fetchPrivacyPolicySeoApi error:", error)
+            return null
+        }
     }
     const fetchTermAndConditionsSeoApi=async()=>{
-        let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/terms-conditions`)
-        let response=await data.json()
-        return response
+        try {
+            let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/terms-conditions`)
+            if (!data.ok) return null
+            let response=await data.json()
+            return response
+        } catch (error) {
+            console.error("fetchTermAndConditionsSeoApi error:", error)
+            return null
+        }
     }
 
     const fetchDestinationsSeo=async()=>{
-        let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/destination`)
-        let response=await data.json()
-        return response
+        try {
+            let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/destination`)
+            if (!data.ok) return null
+            let response=await data.json()
+            return response
+        } catch (error) {
+            console.error("fetchDestinationsSeo error:", error)
+            return null
+        }
     }
-
-
-    ///////////////////////////////////// fetch all destinations ////////////////////////////////////////////////////////
-
 
     const fetchDestinationsDynamicSeo=async(slug)=>{
-        let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/destination/${slug}`)
-        let response=await data.json()
-        return response
+        try {
+            let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/destination/${slug}`)
+            if (!data.ok) return null
+            let response=await data.json()
+            return response
+        } catch (error) {
+            console.error("fetchDestinationsDynamicSeo error:", error)
+            return null
+        }
     }
     const fetchPackagesDynamicSeo=async(slug)=>{
-        let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/packages/${slug}`)
-        let response=await data.json()
-        return response
+        try {
+            let data=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wp-json/rankmath/v1/getHead?url=${process.env.NEXT_PUBLIC_API_URL}/packages/${slug}`)
+            if (!data.ok) return null
+            let response=await data.json()
+            return response
+        } catch (error) {
+            console.error("fetchPackagesDynamicSeo error:", error)
+            return null
+        }
     }
 
     return{
